@@ -14,6 +14,22 @@ def high_pass_filter(input_signal, alpha=0.1):
         output_signal[n+1] = input_signal[n+1] - alpha * input_signal[n]
     return output_signal
 
+def convolve(x, b):
+    N_x = len(x)
+    N_b = len(b)
+    print(N_x)
+    print(N_b)
+    y = [0] * N_x  # Inicializar vector de salida con ceros
+
+    for n in range(N_x):
+        acc = 0
+        for k in range(N_b):
+            acc += b[k] * x[n-k]
+        y[n] = acc
+
+    return y
+
+
 def save_output_to_wav(output_signal, sample_rate):
     # Check for NaN or Inf in the output signal
     if np.any(np.isnan(output_signal)) or np.any(np.isinf(output_signal)):
@@ -33,7 +49,7 @@ def save_output_to_wav(output_signal, sample_rate):
 
 def main():
     # Convert the input WAV file to binary
-    try:
+    '''try:
         sample_rate, audio_data = wavfile.read("tada.wav")
         audio_data_float32 = audio_data.astype(np.float32)
         with open("tada.bin", "wb") as file:
@@ -54,6 +70,32 @@ def main():
 
     sample_rate = 44100  # Adjust this to match the sample rate of the original file
     save_output_to_wav(output_signal, sample_rate)
+
+    print("Processing complete. Output saved as 'output.wav'.")'''
+    
+    try:
+        sample_rate, audio_data = wavfile.read("test.wav")
+        audio_data_float32 = audio_data.astype(np.float32)
+        with open("test.bin", "wb") as file:
+            audio_data_float32.tofile(file)
+    except IOError as e:
+        print(f"Unable to open or write to file: {e}")
+        return 1
+
+
+    try:
+        with open("test.bin", "rb") as file:
+            input_signal = np.fromfile(file, dtype=np.float32)
+    except IOError as e:
+        print(f"Unable to open file: {e}")
+        return 1
+    
+    b = [0.75, 0.25]
+
+    output_signal = convolve(input_signal, b)
+    
+    sample_rate = 44100  # Adjust this to match the sample rate of the original file
+    save_output_to_wav(input_signal, sample_rate)
 
     print("Processing complete. Output saved as 'output.wav'.")
 
