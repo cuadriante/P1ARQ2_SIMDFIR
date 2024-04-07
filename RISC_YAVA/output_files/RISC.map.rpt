@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC
-Sun Apr  7 00:41:45 2024
+Sun Apr  7 10:33:23 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -21,11 +21,12 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  13. Port Connectivity Checks: "Decode_Cycle:Decode|Sign_Extend:SignExtend"
  14. Port Connectivity Checks: "Decode_Cycle:Decode|Register_File:RegFileVec"
  15. Port Connectivity Checks: "Fetch_Cycle:Fetch|PC_Adder:PCAdder"
- 16. Port Connectivity Checks: "Fetch_Cycle:Fetch|Mux:MUX_FETCH"
- 17. Port Connectivity Checks: "Fetch_Cycle:Fetch"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 16. Port Connectivity Checks: "Fetch_Cycle:Fetch|PC_Module:Program_Counter"
+ 17. Port Connectivity Checks: "Fetch_Cycle:Fetch|Mux:MUX_FETCH"
+ 18. Port Connectivity Checks: "Fetch_Cycle:Fetch"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -52,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr  7 00:41:44 2024          ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr  7 10:33:23 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; RISC                                           ;
 ; Top-level Entity Name           ; Pipeline_top                                   ;
@@ -321,7 +322,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Port ; Type   ; Severity ; Details                                                                                                                    ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
 ; RD1  ; Output ; Warning  ; Output or bidir port (256 bits) is wider than the port expression (1 bits) it drives; bit(s) "RD1[255..1]" have no fanouts ;
+; RD1  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
 ; RD2  ; Output ; Warning  ; Output or bidir port (256 bits) is wider than the port expression (1 bits) it drives; bit(s) "RD2[255..1]" have no fanouts ;
+; RD2  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -337,6 +340,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; b[226]   ; Input  ; Info     ; Stuck at VCC                                                                                                                                    ;
 ; c        ; Output ; Warning  ; Output or bidir port (256 bits) is wider than the port expression (32 bits) it drives; bit(s) "c[255..32]" have no fanouts                      ;
 +----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Fetch_Cycle:Fetch|PC_Module:Program_Counter"                                                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                               ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; PC      ; Output ; Warning  ; Output or bidir port (256 bits) is wider than the port expression (32 bits) it drives; bit(s) "PC[255..32]" have no fanouts                           ;
+; PC_Next ; Input  ; Warning  ; Input port expression (32 bits) is smaller than the input port (256 bits) it drives.  Extra input bit(s) "PC_Next[255..32]" will be connected to GND. ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -389,7 +402,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Apr  7 00:41:37 2024
+    Info: Processing started: Sun Apr  7 10:33:15 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -397,8 +410,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file vmult.v
     Info (12023): Found entity 1: VMult File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/VMult.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vadder.v
     Info (12023): Found entity 1: VAdder File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/VAdder.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pipeline_tb.v
-    Info (12023): Found entity 1: Pipeline_tb File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file writeback_cycle.v
     Info (12023): Found entity 1: Writeback_Cycle File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Writeback_Cycle.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sign_extend.v
@@ -451,6 +462,7 @@ Warning (10036): Verilog HDL or VHDL warning at Decode_Cycle.v(81): object "RD1D
 Warning (10036): Verilog HDL or VHDL warning at Decode_Cycle.v(81): object "RD2D_reg" assigned a value but never read File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v Line: 81
 Warning (10230): Verilog HDL assignment warning at Decode_Cycle.v(94): truncated value with size 256 to match size of target (5) File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v Line: 94
 Warning (10230): Verilog HDL assignment warning at Decode_Cycle.v(129): truncated value with size 2 to match size of target (1) File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v Line: 129
+Warning (10030): Net "RegFileSelect" at Decode_Cycle.v(16) has no driver or initial value, using a default initial value '0' File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v Line: 16
 Info (12128): Elaborating entity "Control_Unit_Top" for hierarchy "Decode_Cycle:Decode|Control_Unit_Top:ctrl_unit" File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v Line: 44
 Info (12128): Elaborating entity "Main_Decoder" for hierarchy "Decode_Cycle:Decode|Control_Unit_Top:ctrl_unit|Main_Decoder:Main_Decoder" File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Control_Unit_Top.v Line: 21
 Info (12128): Elaborating entity "ALU_Decoder" for hierarchy "Decode_Cycle:Decode|Control_Unit_Top:ctrl_unit|ALU_Decoder:ALU_Decoder" File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Control_Unit_Top.v Line: 29
@@ -471,9 +483,6 @@ Info (12128): Elaborating entity "Writeback_Cycle" for hierarchy "Writeback_Cycl
 Info (12128): Elaborating entity "Hazard_Unit" for hierarchy "Hazard_Unit:HazardUnit" File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 148
 Warning (10036): Verilog HDL or VHDL warning at Hazard_Unit.v(19): object "funct3" assigned a value but never read File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v Line: 19
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "RegFileSelect" is missing source, defaulting to GND File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 4
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "RegFileSelect" is missing source, defaulting to GND File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 4
     Warning (12110): Net "InstrD[255]" is missing source, defaulting to GND File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 8
     Warning (12110): Net "InstrD[254]" is missing source, defaulting to GND File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 8
     Warning (12110): Net "InstrD[253]" is missing source, defaulting to GND File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 8
@@ -1146,7 +1155,7 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "PCPlus4D[34]" is missing source, defaulting to GND File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 8
     Warning (12110): Net "PCPlus4D[33]" is missing source, defaulting to GND File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 8
     Warning (12110): Net "PCPlus4D[32]" is missing source, defaulting to GND File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 8
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -1155,10 +1164,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 696 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 694 warnings
     Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Sun Apr  7 00:41:45 2024
+    Info: Processing ended: Sun Apr  7 10:33:23 2024
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
 
 

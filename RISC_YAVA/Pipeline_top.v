@@ -84,9 +84,9 @@ module Pipeline_top(clk,rst);
         .PCPlus4M(PCPlus4M), 
         .WriteDataM(WriteDataM), 
         .ALUResultM(ALUResultM)
-        // .ResultW(ResultW)
-        // .ForwardA_E(ForwardAE),
-        // .ForwardB_E(ForwardBE)
+        //.ResultW(ResultW)
+        //.ForwardA_E(ForwardAE),
+        //.ForwardB_E(ForwardBE)
         );
     
     // Memory Stage

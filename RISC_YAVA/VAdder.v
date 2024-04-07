@@ -6,7 +6,7 @@ module VAdder(
 );
 
 		
-	
+
     wire [255:0] _B = (ALUControl[0] == 1'b1)?(~B):B;
 
     assign Result[15:0]   = A[15:0]  +   _B[15:0]+  ALUControl[0];
