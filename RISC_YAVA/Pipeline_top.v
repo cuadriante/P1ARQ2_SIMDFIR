@@ -1,5 +1,3 @@
-
-
 module Pipeline_top(clk,rst);
     input clk,rst;
     // Declaration of Interim Wires
@@ -81,7 +79,7 @@ module Pipeline_top(clk,rst);
         .RegWriteM(RegWriteM), 
         .MemWriteM(MemWriteM), 
         .ResultSrcM(ResultSrcM), 
-            .RegFileSelect(RegFileSelect),
+        .RegFileSelect(RegFileSelect),
         .RdM(RDM), 
         .PCPlus4M(PCPlus4M), 
         .WriteDataM(WriteDataM), 

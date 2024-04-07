@@ -11,9 +11,9 @@ input [255:0] InstrD, PCD, PCPlus4D;
 input [255:0] ResultW;
 input [4:0] RDW;
 input RegWriteW;
-input RegFileSelect;
 
 
+output RegFileSelect;
 output [255:0] RD1E, RD2E, PCE, ImmExtE, PCPlus4E;
 output [4:0] RDE;
 output RegWriteE, MemWriteE, BranchE, ALUSrcE;
