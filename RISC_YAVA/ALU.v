@@ -17,13 +17,15 @@ module ALU(A,B,Result,ALUControl,RegFileSelect,OverFlow,Carry,Zero,Negative);
 	 	.A(A),
 	 	.B(B),
 	 .Result(vadd_result),
-	 .ALUControl(ALUControl));
+	 .ALUControl(ALUControl)
+	 );
 	
 	 
 	 VMult VMul(
 	 	.A(A),
 	 	.B(B),
-	 .Result(vmult_result));
+	 .Result(vmult_result)
+	 );
 	 
 	
 	 
@@ -33,10 +35,11 @@ module ALU(A,B,Result,ALUControl,RegFileSelect,OverFlow,Carry,Zero,Negative);
 	assign Sum = (ALUControl[0] == 1'b0) ? A + B : (A + ((~B)+1)) ;
 	assign {Cout,Result} = ((ALUControl == 3'b000) & (RegFileSelect == 0)) ? Sum :
 									((ALUControl == 3'b001)& (RegFileSelect == 0)) ? Sum :
-									((ALUControl == 3'b010) & (RegFileSelect == 0)) ? A & B :
-									((ALUControl == 3'b011) & (RegFileSelect == 0)) ? A | B :
+									((ALUControl == 3'b010) & (RegFileSelect == 0)) ? A[15:0] & B[15:0]:
+									((ALUControl == 3'b011) & (RegFileSelect == 0)) ? A[15:0] | B[15:0]:
 									((ALUControl == 3'b101) & (RegFileSelect == 0)) ? {{16{1'b0}},(Sum[15])} :
-									((ALUControl == 3'b00?) & (RegFileSelect == 1)) ? {{1'b0},vadd_result} :
+									((ALUControl == 3'b000) & (RegFileSelect == 1)) ? {{1'b0}, vadd_result} :
+									((ALUControl == 3'b001) & (RegFileSelect == 1)) ? {{1'b0}, vadd_result} :
 									((ALUControl == 3'b011) & (RegFileSelect == 1)) ? {{1'b0}, vmult_result} :
 									((ALUControl == 3'b101) & (RegFileSelect == 1)) ? {{1'b0}, A[15:0], A[255:16]}:{255'b0};
 									

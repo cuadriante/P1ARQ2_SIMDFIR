@@ -21,7 +21,7 @@ Data_Memory DataMem(
     .rst(rst),
     .WE(MemWriteM),
     .WD(WriteDataM),
-    .A(ALUResultM),
+    .A(ALUResultM[15:0]),
     .RD(ReadDataM)
 );
 
@@ -31,7 +31,7 @@ reg RegWriteW_reg, ResultSrcW_reg;
 always @(negedge clk or negedge rst) begin
     if(rst==0) begin
 
-		          ReadDataW_reg<=256'd0;
+		  ReadDataW_reg<=256'd0;
         RdW_reg<=5'd0;
         PCPlus4W_reg<=256'd0;
         ALUResultW_reg<=256'd0;

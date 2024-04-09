@@ -5,7 +5,7 @@ module Register_File(clk,rst,WE3,WD3,A1,A2,A3,RD1,RD2);
     input [255:0]WD3;
     output [255:0]RD1,RD2;
 
-    reg [31:0] Register [31:0];
+    reg [255:0] Register [31:0];
 
     always @ (posedge clk)
     begin

@@ -7,11 +7,11 @@ RegWriteE, ResultSrcE, MemWriteE, BranchE, ALUSrcE, //o/p
 RD1E, RD2E, PCE, RDE, ImmExtE, PCPlus4E, ALUControlE);
 
 input clk,rst;
-input [255:0] InstrD, PCD, PCPlus4D;
+input [255:0] PCD, PCPlus4D;
 input [255:0] ResultW;
 input [4:0] RDW;
 input RegWriteW;
-
+input [31:0] InstrD;
 
 output RegFileSelect;
 output [255:0] RD1E, RD2E, PCE, ImmExtE, PCPlus4E;
@@ -25,7 +25,7 @@ output [2:0] ALUControlE;
 wire RegWriteD,ALUSrcD,MemWriteD,ResultSrcD,BranchD;
 wire [1:0]ImmSrcD;
 wire [2:0]ALUControlD;
-wire [255:0] RD1D,RD2D,ImmExtD;
+wire [255:0] RD1D,RD2D,ImmExtD, RD1D2, RD2D2;
 wire [4:0] RdD;
 
 assign RdD=InstrD[11:7];
@@ -116,6 +116,8 @@ always @(negedge clk or negedge rst) begin
     end
 end
 
+assign ALUControlE=ALUControlD_reg;
+assign RegFileSelect = ((InstrD[6:0] == 7'b1000000) | (InstrD[6:0] == 7'b1000001) | (InstrD[6:0] == 7'b1000011) | (InstrD[6:0] == 7'b1000100) | (InstrD[6:0] == 7'b1000101)) ? 1'b1 : 1'b0;
 assign RD1E = (RegFileSelect) ? RD1D2 : RD1D;
 assign RD2E = (RegFileSelect) ? RD2D2 : RD2D;
 assign PCE=PCD_reg;
@@ -127,7 +129,7 @@ assign MemWriteE=MemWriteD_reg;
 assign BranchE=BranchD_reg;
 assign ALUSrcE=ALUSrcD_reg;
 assign ResultSrcE=ResultSrcD_reg;
-assign ALUControlE=ALUControlD_reg;
+
 
 
 endmodule

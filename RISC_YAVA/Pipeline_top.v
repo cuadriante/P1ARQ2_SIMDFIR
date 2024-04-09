@@ -1,22 +1,24 @@
 module Pipeline_top(clk,rst);
     input clk,rst;
+
     // Declaration of Interim Wires
     wire PCSrcE, RegWriteW, RegFileSelect, RegWriteE, ALUSrcE, MemWriteE, ResultSrcE, BranchE, RegWriteM, MemWriteM, ResultSrcM, ResultSrcW;
     wire JumpE;
     wire [2:0] ALUControlE;
     wire [4:0] RDE, RDM, RDW;
-    wire [255:0] PCTargetE, InstrD, PCD, PCPlus4D, ResultW, RD1E, RD2E, ImmExtE, PCE, PCPlus4E, PCPlus4M, WriteDataM, ALUResultM;
+    wire [255:0] PCTargetE, PCD, PCPlus4D, ResultW, RD1E, RD2E, ImmExtE, PCE, PCPlus4E, PCPlus4M, WriteDataM, ALUResultM;
     wire [255:0] PCPlus4W, ALUResultW, ReadDataW;
     wire [4:0] RS1_E, RS2_E;
     wire [1:0] ForwardBE, ForwardAE;
     wire [1:0] VForwardBE, VForwardAE;
     
     wire [31:0] PC;
+	 
+	 wire [31:0]InstrD;
 
     wire StallD, StallF, FlushD, FlushE;
     wire VStallD, VStallF, VFlushD, VFlushE;
     
-
     // Module Initiation
 
     // Fetch Stage

@@ -13,15 +13,16 @@ module Instruction_Memory(rst,A,RD);
 //  end
 
 
-/*
+
   initial begin
     //mem[0] = 32'hFFC4A303;
     //mem[1] = 32'h00832383;
     // mem[0] = 32'h0064A423;
     // mem[1] = 32'h00B62423;
-    mem[0] = 32'h0062E233;
+    mem[0] = 32'b00000000000000001010000010000011;
     // mem[1] = 32'h00B62423;
 
   end
-*/
+
+
 endmodule

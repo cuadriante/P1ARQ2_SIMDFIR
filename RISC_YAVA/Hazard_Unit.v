@@ -27,7 +27,7 @@ module Hazard_Unit(input  [4:0] Rs1D, Rs2D, Rs1E, Rs2E,
         VForwardAE = 2'b00;
         VForwardBE = 2'b00;
 
-        if (funct7 == 2'b1010101) begin 
+        if (funct7 == 7'b1010101) begin 
             if ((Rs1E == RdM) & (RegWriteM) & (Rs1E != 0)) // higher priority - most recent
                 ForwardAE = 2'b10; // for forwarding ALU Result in Memory Stage
             else if ((Rs1E == RdW) & (RegWriteW) & (Rs1E != 0))
