@@ -89,11 +89,23 @@ def format_register(reg):
     return '{:05b}'.format(int(reg))
 
 def format_immediate(imm, bits=12):
-    """Formatea un valor inmediato a su representación binaria, manejando prefijos como '#'."""
-    imm = re.sub(r'[^\d-]', '', imm)  # Elimina caracteres no numéricos excepto el signo negativo
-    imm_value = int(imm)
+    """
+    Formatea un valor inmediato a su representación binaria.
+    Puede manejar valores decimales y hexadecimales.
+    """
+    # Elimina el prefijo '#'
+    imm = imm.replace('#', '')
+    
+    # Detecta y convierte valores hexadecimales
+    if imm.startswith('0x') or imm.startswith('-0x'):
+        imm_value = int(imm, 16)  # Convierte de hexadecimal a decimal
+    else:
+        imm_value = int(imm)  # Convierte de decimal a decimal (básicamente, no cambia)
+    
+    # Manejo de valores negativos en complemento a dos
     if imm_value < 0:
-        imm_value = (1 << bits) + imm_value  # Manejo de valores negativos en complemento a dos
+        imm_value = (1 << bits) + imm_value
+    
     return '{:0{bits}b}'.format(imm_value & ((1 << bits) - 1), bits=bits)
 
 def process_R_format(operation, operands):
@@ -103,29 +115,36 @@ def process_R_format(operation, operands):
     return f"{bits['funct7']}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{format_register(rd)}{bits['opcode']}"
 
 def process_I_format(operation, operands, labels=None):
+    """
+    Procesa instrucciones de formato I, adecuado tanto para operaciones aritméticas
+    como para cargas de memoria, donde se espera un registro, un registro base y un valor inmediato.
+    """
     bits = instruction_set[operation]
     opcode = bits['opcode']
     funct3 = bits['funct3']
 
+    # Asegura que hay un número correcto de operandos
     if len(operands) != 3:
         raise ValueError(f"Número incorrecto de operandos para {operation}: {operands}")
 
-    rd, rs1, imm = operands
+    rd, rs1, imm_operand = operands
 
-    imm = format_immediate(imm, 12)  # Maneja correctamente los valores inmediatos
+    # Usa format_immediate para manejar correctamente valores hexadecimales
+    imm = format_immediate(imm_operand, 12)  # Maneja correctamente los valores inmediatos
+
     compiled_instruction = f"{imm}{format_register(rs1)}{funct3}{format_register(rd)}{opcode}"
-    print(f"Compilando {operation}: {compiled_instruction}")  # Imprime la instrucción compilada
+    print(f"Compilando {operation}: {compiled_instruction}")
     return compiled_instruction
 
 
-
-
 def process_S_format(operation, operands):
-    """Procesa instrucciones de formato S."""
-    rs1, rs2, imm = operands
+    rs1, rs2, imm_operand = operands
     bits = instruction_set[operation]
-    imm = format_immediate(imm, 12)
-    return f"{imm[0:7]}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{imm[7:12]}{bits['opcode']}"
+    imm = format_immediate(imm_operand, 12)
+    imm_high = imm[0:7]  # imm[11:5]
+    imm_low = imm[7:12]  # imm[4:0]
+    return f"{imm_high}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{imm_low}{bits['opcode']}"
+
 
 def process_SB_format(operation, operands, labels):
     """Procesa instrucciones de formato SB para saltos condicionales."""
