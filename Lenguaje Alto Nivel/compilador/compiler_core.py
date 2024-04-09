@@ -294,7 +294,7 @@ def fill_with_stall_bytes(file):
         file.write(''.join(str(x) for x in STALL) + '\n')
 
 def main():
-    input_file = r'Lenguaje Alto Nivel\compilador\input.asm'  # Tu archivo de ensamblaje de entrada
+    input_file = r'Lenguaje Alto Nivel\compilador\inputEqual16.asm'  # Tu archivo de ensamblaje de entrada
     output_file = r'Lenguaje Alto Nivel\compilador\output.bin' # Actualiza esta ruta
     instructions, labels = read_instructions_from_file(input_file)
     compiled_instructions = compile_instructions(instructions, labels)

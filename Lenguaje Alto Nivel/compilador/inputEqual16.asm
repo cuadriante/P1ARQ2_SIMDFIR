@@ -1,5 +1,5 @@
-LW r6, r6, #0x16                            ;indice para muestra 16 elementos del audio real - 16 en memoria
-LW r8, r8, #0x48                            ;indice para guardar en memoria real - 16 en memoria
+LW r6, #0x16                                ;indice para muestra 16 elementos del audio real - 16 en memoria
+LW r8, #0x48                                ;indice para guardar en memoria real - 16 en memoria
 LDV r1, #0x00                               ;coeficientes b CAMBIAR 0x00 por el espacio de memoria real
 
 LOOP_BETWEEN_AUDIOS:
@@ -7,7 +7,7 @@ LOOP_BETWEEN_AUDIOS:
     LDV r2, r6                              ;muestra 16 elementos del audio
 
 LOOP_AUDIO:
-    LW r7, r7, #0                           ;index for SUMATORIA
+    LW r7, #0                               ;index for SUMATORIA
     MULV r3, r2, r1                         ;mul b * x
 
 LOOP_SUMATORIA:
