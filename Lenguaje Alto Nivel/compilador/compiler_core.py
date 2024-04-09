@@ -20,7 +20,7 @@ instruction_set = {
     'SLLI': {'format': 'I', 'funct7': '0000000', 'inmediato': '', 'rs1': '', 'funct3': '001', 'rd': '', 'opcode': '0010011'},
     'SRLI': {'format': 'I', 'funct7': '0000000', 'inmediato': '', 'rs1': '', 'funct3': '101', 'rd': '', 'opcode': '0010011'},
     'SRAI': {'format': 'I', 'funct7': '0100000', 'inmediato': '', 'rs1': '', 'funct3': '101', 'rd': '', 'opcode': '0010011'},
-    'LW': {'format': 'I', 'inmediato': '', 'rs1': '', 'funct3': '010', 'rd': '', 'opcode': '0000011'},
+    'LW': {'format': 'LW', 'inmediato': '', 'rs1': '', 'funct3': '010', 'rd': '', 'opcode': '0000011'},
     'SW': {'format': 'S', 'inmediato': '', 'rs2': '', 'rs1': '', 'funct3': '010', 'opcode': '0100011'},
     'BEQ': {'format': 'SB', 'inmediato': '', 'rs2': '', 'rs1': '', 'funct3': '000', 'opcode': '1100011'},
     'JAL': {'format': 'UJ', 'inmediato': '', 'rd': '', 'opcode': '1101111'},
@@ -76,6 +76,8 @@ def decode_instruction(instruction, labels):
         return process_UJ_format(operation, operands, labels)
     elif inst_format == 'CUSTOM':
         return process_CUSTOM_format(operation, operands, labels)
+    elif inst_format == 'LW':
+        return process_LW_format(operation, operands, labels)
     else:
         print(f"Unsupported operation: {operation}")
         return None
@@ -87,6 +89,38 @@ def format_register(reg):
     """Formatea un registro a su representación binaria, asegurando que no haya caracteres adicionales."""
     reg = re.sub(r'[^0-9]', '', reg)  # Elimina cualquier carácter no numérico
     return '{:05b}'.format(int(reg))
+
+def process_LW_format(operations, operands, labels):
+    """
+    Procesa instrucciones de formato LW para cargar un valor desde memoria.
+    El primer operando puede ser un registro o un inmediato, mientras que el segundo operando debe ser un registro.
+    """
+    # Verifica que haya un número correcto de operandos
+    if len(operands) != 2:
+        raise ValueError(f"Número incorrecto de operandos para LW: {operands}")
+
+    # Obtiene los operandos
+    rd, rs1_or_imm = operands
+
+    # Verifica si el primer operando es un registro o un inmediato
+    if rs1_or_imm.startswith('x') or rs1_or_imm.startswith('X'):
+        # El primer operando es un registro
+        rs1 = rs1_or_imm
+        imm = '00000'  # En LW, el inmediato siempre es 0
+    else:
+        # El primer operando es un inmediato
+        rs1 = '00000'  # En LW, el registro base siempre es x0
+        imm = format_immediate(rs1_or_imm, bits=12)  # Convierte el inmediato a binario
+
+    # Obtén los bits específicos de LW
+    bits = instruction_set['LW']
+    opcode = bits['opcode']
+    funct3 = bits['funct3']
+
+    compiled_instruction = f"{imm}{format_register(rs1)}{funct3}{format_register(rd)}{opcode}"
+    print(f"Compilando LW: {compiled_instruction}")
+    return compiled_instruction
+
 
 def format_immediate(imm, bits=12):
     """
@@ -138,12 +172,23 @@ def process_I_format(operation, operands, labels=None):
 
 
 def process_S_format(operation, operands):
-    rs1, rs2, imm_operand = operands
+    """
+    Procesa instrucciones de formato S, adecuado para almacenar valores en memoria.
+    Espera dos registros, uno con el valor a almacenar y otro con la dirección base de memoria.
+    """
     bits = instruction_set[operation]
-    imm = format_immediate(imm_operand, 12)
-    imm_high = imm[0:7]  # imm[11:5]
-    imm_low = imm[7:12]  # imm[4:0]
-    return f"{imm_high}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{imm_low}{bits['opcode']}"
+    opcode = bits['opcode']
+
+    # Asegura que hay un número correcto de operandos
+    if len(operands) != 2:
+        raise ValueError(f"Número incorrecto de operandos para {operation}: {operands}")
+
+    rs1, rs2 = operands
+
+    compiled_instruction = f"{format_immediate('0', 7)}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{format_immediate('0', 5)}{opcode}"
+    print(f"Compilando {operation}: {compiled_instruction}")
+    return compiled_instruction
+
 
 
 def process_SB_format(operation, operands, labels):
