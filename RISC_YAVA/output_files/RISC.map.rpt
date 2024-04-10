@@ -1,5 +1,5 @@
 Analysis & Elaboration report for RISC
-Tue Apr 09 17:28:19 2024
+Tue Apr 09 20:55:35 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Apr 09 17:28:19 2024       ;
+; Analysis & Elaboration Status ; Successful - Tue Apr 09 20:55:35 2024       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; RISC                                        ;
 ; Top-level Entity Name         ; Pipeline_top                                ;
@@ -265,7 +265,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 09 17:28:10 2024
+    Info: Processing started: Tue Apr 09 20:55:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -312,17 +312,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: ALU File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hazard_unit.v
     Info (12023): Found entity 1: Hazard_Unit File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v Line: 2
+Warning (12019): Can't analyze file -- file Pipeline_top_tb.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
-    Info (12023): Found entity 1: ALU_tb File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file vadder_tb.sv
-    Info (12023): Found entity 1: VAdder_tb File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VAdder_tb.sv Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file pipeline_top_tb.sv
-    Info (12023): Found entity 1: Pipeline_top_tb File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top_tb.sv Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at Pipeline_top_tb.sv(13): created implicit net for "A_t" File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top_tb.sv Line: 13
-Warning (10236): Verilog HDL Implicit Net warning at Pipeline_top_tb.sv(14): created implicit net for "B_t" File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top_tb.sv Line: 14
-Warning (10236): Verilog HDL Implicit Net warning at Pipeline_top_tb.sv(15): created implicit net for "ALUControl_t" File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top_tb.sv Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at Pipeline_top_tb.sv(16): created implicit net for "RegFileSelect_t" File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top_tb.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at Pipeline_top_tb.sv(17): created implicit net for "Result_t" File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top_tb.sv Line: 17
+    Info (12023): Found entity 1: ALU_tb File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv Line: 3
 Info (12127): Elaborating entity "Pipeline_top" for the top level hierarchy
 Info (12128): Elaborating entity "Fetch_Cycle" for hierarchy "Fetch_Cycle:Fetch" File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 34
 Info (12128): Elaborating entity "Mux" for hierarchy "Fetch_Cycle:Fetch|Mux:MUX_FETCH" File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 20
@@ -805,10 +797,10 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "PCPlus4D[33]" is missing source, defaulting to GND File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 9
     Warning (12110): Net "PCPlus4D[32]" is missing source, defaulting to GND File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 9
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 469 warnings
-    Info: Peak virtual memory: 4990 megabytes
-    Info: Processing ended: Tue Apr 09 17:28:19 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 465 warnings
+    Info: Peak virtual memory: 4993 megabytes
+    Info: Processing ended: Tue Apr 09 20:55:35 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 

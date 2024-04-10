@@ -1,0 +1,23 @@
+`timescale 1 ps / 1 ps
+
+module ALU_tb();
+
+	
+	logic [31:0] a, b;
+	logic [3:0] aluControl;
+	logic [31:0] resultado;
+	logic cout, zero, neg, overflow;
+	
+	
+	alu ALU(a, b, aluControl, resultado, cout, zero, neg, overflow);
+	
+
+	initial begin
+	
+		a = 16;
+		b = 2;
+		aluControl = 3;
+	end
+
+
+endmodule

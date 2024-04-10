@@ -41,7 +41,7 @@ module ALU(A,B,Result,ALUControl,RegFileSelect,OverFlow,Carry,Zero,Negative);
 									((ALUControl == 3'b000) & (RegFileSelect == 1)) ? {{1'b0}, vadd_result} :
 									((ALUControl == 3'b001) & (RegFileSelect == 1)) ? {{1'b0}, vadd_result} :
 									((ALUControl == 3'b011) & (RegFileSelect == 1)) ? {{1'b0}, vmult_result} :
-									((ALUControl == 3'b101) & (RegFileSelect == 1)) ? {{1'b0}, A[255:240], A[239:0]}:{255'b0};
+									((ALUControl == 3'b101) & (RegFileSelect == 1)) ? {{1'b0}, A[239:0], A[255:240]}:{255'b0};
 									
 	assign OverFlow = ((Sum[15] ^ A[15]) & 
 							 (~(ALUControl[0] ^ B[15] ^ A[15])) &
