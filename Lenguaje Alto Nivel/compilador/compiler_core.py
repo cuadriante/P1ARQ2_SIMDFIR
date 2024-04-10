@@ -60,6 +60,7 @@ def compile_instructions(instructions, labels):
     return binary_instructions
 
 def decode_instruction(instruction, labels):
+    print(instruction)
     parts = instruction.split()
     operation = parts[0].upper()
     operands = parts[1:]  # Esto debería ser una lista de operandos, como ['x1', 'x2', '#10']
@@ -90,34 +91,30 @@ def format_register(reg):
     reg = re.sub(r'[^0-9]', '', reg)  # Elimina cualquier carácter no numérico
     return '{:05b}'.format(int(reg))
 
-def process_LW_format(operations, operands, labels):
+def process_LW_format(operation, operands, labels):
     """
     Procesa instrucciones de formato LW para cargar un valor desde memoria.
-    El primer operando puede ser un registro o un inmediato, mientras que el segundo operando debe ser un registro.
+    El primer operando es el registro destino y el segundo puede ser un registro
+    o un inmediato, indicando la dirección de memoria de la cual cargar el valor.
     """
-    # Verifica que haya un número correcto de operandos
     if len(operands) != 2:
         raise ValueError(f"Número incorrecto de operandos para LW: {operands}")
 
-    # Obtiene los operandos
-    rd, rs1_or_imm = operands
+    rd, second_operand = operands
 
-    # Verifica si el primer operando es un registro o un inmediato
-    if rs1_or_imm.startswith('x') or rs1_or_imm.startswith('X'):
-        # El primer operando es un registro
-        rs1 = rs1_or_imm
-        imm = '00000'  # En LW, el inmediato siempre es 0
+    if second_operand.startswith('#'):
+        # El segundo operando es un valor inmediato, manejar como dirección de memoria inmediata
+        imm = format_immediate(second_operand, bits=12)
+        rs1 = '00000'  # Utilizar un registro base ficticio, si tu arquitectura lo requiere
+    elif second_operand.startswith('r'):
+        # El segundo operando es un registro, usar su valor como dirección base
+        rs1 = format_register(second_operand)
+        imm = '000000000000'  # Offset cero si se carga directamente de un registro
     else:
-        # El primer operando es un inmediato
-        rs1 = '00000'  # En LW, el registro base siempre es x0
-        imm = format_immediate(rs1_or_imm, bits=12)  # Convierte el inmediato a binario
+        raise ValueError(f"Operando no válido en LW: {second_operand}")
 
-    # Obtén los bits específicos de LW
     bits = instruction_set['LW']
-    opcode = bits['opcode']
-    funct3 = bits['funct3']
-
-    compiled_instruction = f"{imm}{format_register(rs1)}{funct3}{format_register(rd)}{opcode}"
+    compiled_instruction = f"{imm}{format_register(rs1)}{bits['funct3']}{format_register(rd)}{bits['opcode']}"
     print(f"Compilando LW: {compiled_instruction}")
     return compiled_instruction
 
@@ -146,7 +143,9 @@ def process_R_format(operation, operands):
     """Procesa instrucciones de formato R."""
     rd, rs1, rs2 = operands
     bits = instruction_set[operation]
-    return f"{bits['funct7']}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{format_register(rd)}{bits['opcode']}"
+    compiled_instruction = f"{bits['funct7']}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{format_register(rd)}{bits['opcode']}"
+    print(f"Compilando {operation}: {compiled_instruction}")
+    return compiled_instruction
 
 def process_I_format(operation, operands, labels=None):
     """
@@ -198,7 +197,9 @@ def process_SB_format(operation, operands, labels):
     # Aquí necesitarías calcular el offset basado en la etiqueta y la posición actual
     # Este es un placeholder para el cálculo del offset
     offset = '000000000000'  # Este valor debe calcularse correctamente
-    return f"{offset[0]}{offset[2:8]}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{offset[8:12]}{offset[1]}{bits['opcode']}"
+    compiled_instruction = f"{offset[0]}{offset[2:8]}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{offset[8:12]}{offset[1]}{bits['opcode']}"
+    print(f"Compilando {operation}: {compiled_instruction}")
+    return compiled_instruction
 
 def process_UJ_format(operation, operands, labels):
     global pc
