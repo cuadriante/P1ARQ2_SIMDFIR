@@ -1,6 +1,6 @@
 EDA Netlist Writer report for RISC
-Mon Apr 08 13:48:39 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Wed Apr 10 01:15:12 2024
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Apr 08 13:48:39 2024 ;
+; EDA Netlist Writer Status ; Successful - Wed Apr 10 01:15:12 2024 ;
 ; Revision Name             ; RISC                                  ;
 ; Top-level Entity Name     ; Pipeline_top                          ;
 ; Family                    ; Cyclone V                             ;
@@ -45,34 +45,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------+---------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                           ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Option                                                                                            ; Setting                   ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate functional simulation netlist                                                            ; On                        ;
-; Truncate long hierarchy paths                                                                     ; Off                       ;
-; Map illegal HDL characters                                                                        ; Off                       ;
-; Flatten buses into individual nodes                                                               ; Off                       ;
-; Maintain hierarchy                                                                                ; Off                       ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
-; Enable glitch filtering                                                                           ; Off                       ;
-; Do not write top level VHDL entity                                                                ; Off                       ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
-; Architecture name in VHDL output netlist                                                          ; structure                 ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                             ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
+; Option                                                                                            ; Setting                     ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
+; Tool Name                                                                                         ; Questa Intel FPGA (Verilog) ;
+; Generate functional simulation netlist                                                            ; On                          ;
+; Truncate long hierarchy paths                                                                     ; Off                         ;
+; Map illegal HDL characters                                                                        ; Off                         ;
+; Flatten buses into individual nodes                                                               ; Off                         ;
+; Maintain hierarchy                                                                                ; Off                         ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                         ;
+; Enable glitch filtering                                                                           ; Off                         ;
+; Do not write top level VHDL entity                                                                ; Off                         ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                         ;
+; Architecture name in VHDL output netlist                                                          ; structure                   ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                         ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                         ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                           ;
-+--------------------------------------------------------------------------------------+
-; Generated Files                                                                      ;
-+--------------------------------------------------------------------------------------+
-; C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/simulation/modelsim/RISC.vo ;
-+--------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Simulation Generated Files                                        ;
++-------------------------------------------------------------------+
+; Generated Files                                                   ;
++-------------------------------------------------------------------+
+; C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/simulation/questa/RISC.vo ;
++-------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,15 +80,27 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Apr 08 13:48:38 2024
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Wed Apr 10 01:15:12 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off RISC -c RISC
+Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file RISC.vo in folder "C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/simulation/modelsim/" for EDA simulation tool
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (204019): Generated file RISC.vo in folder "C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/simulation/questa/" for EDA simulation tool
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
+Info (22678): An alias for the "ModelSim-Altera (Verilog)" simulation tool has been found. Updating the tool name to "Questa Intel FPGA (Verilog)".
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4723 megabytes
-    Info: Processing ended: Mon Apr 08 13:48:39 2024
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4727 megabytes
+    Info: Processing ended: Wed Apr 10 01:15:12 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

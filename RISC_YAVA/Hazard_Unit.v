@@ -3,7 +3,7 @@ module Hazard_Unit(input  [4:0] Rs1D, Rs2D, Rs1E, Rs2E,
                 input  [4:0] RdE, RdM, RdW,
                 input  RegWriteM, RegWriteW,
 					 input  ResultSrcE0, PCSrcE, rst,
-                input  [255:0] InstrD,                      // Instruccion por ejecutar para saber cual pipeline
+                input  [31:0] InstrD,                      // Instruccion por ejecutar para saber cual pipeline
                 output reg [1:0] ForwardAE, ForwardBE,      // Forward Pipeline Escalar
                 output reg [1:0] VForwardAE, VForwardBE,    // Forward Pipeline Vectorial
                 output StallD, StallF, FlushD, FlushE,      // Stalls y Flushes Escalares

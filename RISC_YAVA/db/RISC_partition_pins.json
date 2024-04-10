@@ -2,24 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "RDW_test",
-					"strict" : false
-				},
-				{
-					"name" : "ResultW_test",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }

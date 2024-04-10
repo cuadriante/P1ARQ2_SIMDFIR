@@ -2,11 +2,12 @@ module Fetch_Cycle(clk,rst,PCSrcE,PCTargetE,InstrD,PCD,PCPlus4D);
 
 input clk,rst;
 input PCSrcE;
-input [31:0] PCTargetE;
-output [31:0] PCPlus4D, PCD, InstrD;
+input [255:0] PCTargetE;
+output [255:0] PCPlus4D, PCD;
+output [31:0] InstrD;
 
-wire [31:0] PC_F,PCF;
-wire [31:0] InstrF,PCPlus4F;
+wire [255:0] PC_F,PCF,PCPlus4F;
+wire [31:0] InstrF;
 
 //REGs
 reg [31:0] InstrF_reg, PCF_reg, PCPlus4F_reg;
@@ -28,7 +29,7 @@ PC_Module Program_Counter(
 
 PC_Adder PCAdder(
     .a(PCF),
-    .b(32'd4),
+    .b(256'd4),
     .c(PCPlus4F)
 );
 
