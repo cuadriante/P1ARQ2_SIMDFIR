@@ -1,14 +1,10 @@
 import compiler_core as cc
+import glob
+import os
 
 base_path = r'Lenguaje Alto Nivel/compilador/asm/'
 
-archivos_asm = [
-    'inputEqual16.asm',
-    'inputOver16.asm',
-    'inputUnder16.asm',
-    'inputNoSIMD.asm'
-]
+archivos_asm = glob.glob(os.path.join(base_path, '*.asm'))
 
-for nombre_archivo in archivos_asm:
-    camino_completo = f"{base_path}{nombre_archivo}"
-    cc.compilar(camino_completo)
+for file in archivos_asm:
+    cc.compilar(file)
