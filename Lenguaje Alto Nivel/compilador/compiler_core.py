@@ -41,13 +41,12 @@ def read_instructions_from_file(file_path):
     with open(file_path, 'r') as file:
         pc = 0
         for line in file:
-            # Eliminar comentarios
             line = line.split(';')[0].strip().lower()
             if line.endswith(':'):
                 labels.append({'name': line[:-1], 'pc': pc})
             elif line:
                 instructions.append(line)
-                pc += 4  # Suponiendo 4 bytes por instrucción
+                pc += 4 
     return instructions, labels
 
 
@@ -63,7 +62,7 @@ def decode_instruction(instruction, labels):
     print(instruction)
     parts = instruction.split()
     operation = parts[0].upper()
-    operands = parts[1:]  # Esto debería ser una lista de operandos, como ['x1', 'x2', '#10']
+    operands = parts[1:] 
     inst_format = instruction_set[operation]['format']
     if inst_format == 'R':
         return process_R_format(operation, operands)
@@ -88,7 +87,7 @@ def get_instruction_format(operation):
 
 def format_register(reg):
     """Formatea un registro a su representación binaria, asegurando que no haya caracteres adicionales."""
-    reg = re.sub(r'[^0-9]', '', reg)  # Elimina cualquier carácter no numérico
+    reg = re.sub(r'[^0-9]', '', reg)  
     return '{:05b}'.format(int(reg))
 
 def process_LW_format(operation, operands, labels):
@@ -103,13 +102,11 @@ def process_LW_format(operation, operands, labels):
     rd, second_operand = operands
 
     if second_operand.startswith('#'):
-        # El segundo operando es un valor inmediato, manejar como dirección de memoria inmediata
         imm = format_immediate(second_operand, bits=12)
-        rs1 = '00000'  # Utilizar un registro base ficticio, si tu arquitectura lo requiere
+        rs1 = '00000'  
     elif second_operand.startswith('r'):
-        # El segundo operando es un registro, usar su valor como dirección base
         rs1 = format_register(second_operand)
-        imm = '000000000000'  # Offset cero si se carga directamente de un registro
+        imm = '000000000000'  
     else:
         raise ValueError(f"Operando no válido en LW: {second_operand}")
 
@@ -124,16 +121,14 @@ def format_immediate(imm, bits=12):
     Formatea un valor inmediato a su representación binaria.
     Puede manejar valores decimales y hexadecimales.
     """
-    # Elimina el prefijo '#'
+
     imm = imm.replace('#', '')
     
-    # Detecta y convierte valores hexadecimales
     if imm.startswith('0x') or imm.startswith('-0x'):
-        imm_value = int(imm, 16)  # Convierte de hexadecimal a decimal
+        imm_value = int(imm, 16) 
     else:
-        imm_value = int(imm)  # Convierte de decimal a decimal (básicamente, no cambia)
+        imm_value = int(imm) 
     
-    # Manejo de valores negativos en complemento a dos
     if imm_value < 0:
         imm_value = (1 << bits) + imm_value
     
@@ -156,14 +151,12 @@ def process_I_format(operation, operands, labels=None):
     opcode = bits['opcode']
     funct3 = bits['funct3']
 
-    # Asegura que hay un número correcto de operandos
     if len(operands) != 3:
         raise ValueError(f"Número incorrecto de operandos para {operation}: {operands}")
 
     rd, rs1, imm_operand = operands
 
-    # Usa format_immediate para manejar correctamente valores hexadecimales
-    imm = format_immediate(imm_operand, 12)  # Maneja correctamente los valores inmediatos
+    imm = format_immediate(imm_operand, 12) 
 
     compiled_instruction = f"{imm}{format_register(rs1)}{funct3}{format_register(rd)}{opcode}"
     print(f"Compilando {operation}: {compiled_instruction}")
@@ -178,7 +171,6 @@ def process_S_format(operation, operands):
     bits = instruction_set[operation]
     opcode = bits['opcode']
 
-    # Asegura que hay un número correcto de operandos
     if len(operands) != 2:
         raise ValueError(f"Número incorrecto de operandos para {operation}: {operands}")
 
@@ -194,9 +186,7 @@ def process_SB_format(operation, operands, labels):
     """Procesa instrucciones de formato SB para saltos condicionales."""
     rs1, rs2, label = operands
     bits = instruction_set[operation]
-    # Aquí necesitarías calcular el offset basado en la etiqueta y la posición actual
-    # Este es un placeholder para el cálculo del offset
-    offset = '000000000000'  # Este valor debe calcularse correctamente
+    offset = '000000000000' 
     compiled_instruction = f"{offset[0]}{offset[2:8]}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{offset[8:12]}{offset[1]}{bits['opcode']}"
     print(f"Compilando {operation}: {compiled_instruction}")
     return compiled_instruction
@@ -230,16 +220,13 @@ def process_UJ_format(operation, operands, labels):
     imm_11 = (offset >> 11) & 1
     imm_19_12 = (offset >> 12) & 0xFF
 
-    # Combina los bits del valor inmediato
     imm = (imm_20 << 19) | (imm_19_12 << 11) | (imm_11 << 10) | imm_10_1
 
-    # Asegura que el valor inmediato se ajuste a 20 bits
-    if imm & (1 << 19):  # Si el bit 19 es 1, es negativo y extendemos el signo
-        imm |= 0xFFF00000  # Extensión de signo para valores negativos en complemento a dos
+    if imm & (1 << 19): 
+        imm |= 0xFFF00000 
 
-    # Formatea el registro destino y concatena la instrucción
     rd_bits = format_register(rd)
-    imm_bits = format(imm & 0xFFFFF, '020b')  # Asegura que imm es de 20 bits
+    imm_bits = format(imm & 0xFFFFF, '020b') 
     compiled_instruction = f"{imm_bits}{rd_bits}{opcode}"
 
     print(f"Compilando {operation}: {compiled_instruction}")
@@ -250,30 +237,26 @@ def process_CUSTOM_format(operation, operands, labels=None):
     opcode = bits['opcode']
     
     if operation in ['ADDV', 'MULV', 'ROTV']:
-        # Procesamiento para operaciones vectoriales que usan rd, rs1, y rs2.
         rd, rs1, rs2 = operands
         compiled_instruction = f"{bits['funct7']}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{format_register(rd)}{opcode}"
     
     elif operation == 'LDV':
-        # Ajusta para manejar 'LDV rd, #imm' o 'LDV rd, rs1'
         if len(operands) != 2:
             raise ValueError(f"Número incorrecto de operandos para {operation}: {operands}")
         
         rd, operand2 = operands
-        if operand2.startswith('#'):  # Si el segundo operando es un valor inmediato
-            # Procesa el valor inmediato correctamente
+        if operand2.startswith('#'):
             imm = format_immediate(operand2, 12)
-            rs1 = '00000'  # En el formato LDV, el rs1 se establece a '0' si es un inmediato
-        else:  # Si el segundo operando es un registro
+            rs1 = '00000'  
+        else:  
             rs1 = operand2
-            imm = '0' * 12  # Suponiendo que el valor inmediato no se utiliza cuando es un registro
+            imm = '0' * 12 
         compiled_instruction = f"{imm}{format_register(rs1)}{bits['funct3']}{format_register(rd)}{opcode}"
         
     elif operation == 'STV':
         bits = instruction_set[operation]
         opcode = bits['opcode']
 
-        # Asegura que hay un número correcto de operandos
         if len(operands) != 2:
             raise ValueError(f"Número incorrecto de operandos para {operation}: {operands}")
 
@@ -286,9 +269,6 @@ def process_CUSTOM_format(operation, operands, labels=None):
     
     print(f"Compilando {operation}: {compiled_instruction}")
     return compiled_instruction
-
-
-
 
 def write_output(compiled_instructions, output_path):
     if os.path.exists(output_path):
@@ -308,17 +288,12 @@ def compilar(input_file_name):
     base_name = os.path.basename(input_file_name)
     input_file = input_file_name
     
-    # Construye el nombre del archivo de salida reemplazando la extensión
     output_file_name = os.path.splitext(base_name)[0] + '.bin'
     
-    # Construye el camino completo del archivo de salida dentro de la carpeta "compilado"
     output_file_path = os.path.join('Lenguaje Alto Nivel', 'compilador', 'bin', output_file_name)
     
-    
-    # Asegura que el directorio de salida exista
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
     
-    # Aquí iría tu lógica de compilación, usando input_file y output_file_path
     instructions, labels = read_instructions_from_file(input_file)
     compiled_instructions = compile_instructions(instructions, labels)
     write_output(compiled_instructions, output_file_path)
