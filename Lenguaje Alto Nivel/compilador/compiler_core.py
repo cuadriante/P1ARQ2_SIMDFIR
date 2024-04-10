@@ -303,12 +303,18 @@ def fill_with_stall_bytes(file):
     for _ in range(stall_bytes_needed):
         file.write(''.join(str(x) for x in STALL) + '\n')
 
-def main():
-    input_file = r'Lenguaje Alto Nivel\compilador\inputEqual16.asm'  # Tu archivo de ensamblaje de entrada
-    output_file = r'Lenguaje Alto Nivel\compilador\output.bin' # Actualiza esta ruta
+def compilar(input_file_name):
+    input_file = input_file_name
+    
+    # Construye el nombre del archivo de salida reemplazando la extensión
+    output_file_name = os.path.splitext(input_file_name)[0] + '.bin'
+    output_file_path = os.path.join('Lenguaje Alto Nivel', 'compilador', 'compilado', output_file_name)
+    
+    # Asegura que el directorio de salida exista
+    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+    
+    # Aquí iría tu lógica de compilación, usando input_file y output_file_path
     instructions, labels = read_instructions_from_file(input_file)
     compiled_instructions = compile_instructions(instructions, labels)
-    write_output(compiled_instructions, output_file)
-
-if __name__ == '__main__':
-    main()
+    write_output(compiled_instructions, output_file_path)
+    print(f"Archivo {input_file_name} compilado a {output_file_path}")
