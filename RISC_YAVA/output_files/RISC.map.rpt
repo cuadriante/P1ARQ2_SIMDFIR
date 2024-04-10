@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC
-Wed Apr 10 01:14:32 2024
+Wed Apr 10 01:17:34 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 10 01:14:32 2024          ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 10 01:17:34 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; RISC                                           ;
 ; Top-level Entity Name           ; Pipeline_top                                   ;
@@ -328,9 +328,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Apr 10 01:14:22 2024
+    Info: Processing started: Wed Apr 10 01:17:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
-Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file pipeline_tb.v
@@ -376,7 +375,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: ALU File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hazard_unit.v
     Info (12023): Found entity 1: Hazard_Unit File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v Line: 2
-Warning (12019): Can't analyze file -- file Pipeline_top_tb.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
     Info (12023): Found entity 1: ALU_tb File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv Line: 3
 Info (12127): Elaborating entity "Pipeline_top" for the top level hierarchy
@@ -387,6 +385,7 @@ Info (12128): Elaborating entity "Mux" for hierarchy "Fetch_Cycle:Fetch|Mux:MUX_
 Info (12128): Elaborating entity "PC_Module" for hierarchy "Fetch_Cycle:Fetch|PC_Module:Program_Counter" File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 28
 Info (12128): Elaborating entity "PC_Adder" for hierarchy "Fetch_Cycle:Fetch|PC_Adder:PCAdder" File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 34
 Info (12128): Elaborating entity "Instruction_Memory" for hierarchy "Fetch_Cycle:Fetch|Instruction_Memory:I_MEM" File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 40
+Warning (10230): Verilog HDL assignment warning at Instruction_Memory.v(9): truncated value with size 256 to match size of target (32) File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Instruction_Memory.v Line: 9
 Warning (10030): Net "mem.data_a" at Instruction_Memory.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Instruction_Memory.v Line: 7
 Warning (10030): Net "mem.waddr_a" at Instruction_Memory.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Instruction_Memory.v Line: 7
 Warning (10030): Net "mem.we_a" at Instruction_Memory.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/Instruction_Memory.v Line: 7
@@ -422,9 +421,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 5002 megabytes
-    Info: Processing ended: Wed Apr 10 01:14:32 2024
+    Info: Peak virtual memory: 5000 megabytes
+    Info: Processing ended: Wed Apr 10 01:17:34 2024
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 

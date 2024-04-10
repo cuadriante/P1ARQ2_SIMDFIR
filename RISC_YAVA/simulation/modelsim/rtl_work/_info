@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/simulation/modelsim
 vALU
-Z1 !s110 1712717903
+Z1 !s110 1712730094
 !i10b 1
 !s100 n2F]:z2R90`EH^U3a`ZoR0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1712717902.000000
+Z5 !s108 1712730094.000000
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU.v|
 !i113 1
@@ -35,14 +35,14 @@ Z7 !s92 -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_
 Z8 tCvgOpt 0
 n@a@l@u
 vALU_Decoder
-Z9 !s110 1712717902
+R1
 !i10b 1
 !s100 E=J[HVdEJdEMZd@[?5IkG1
 R2
 I9I]Jj@L0lYW=`:ijAE?;T3
 R3
 R0
-Z10 w1710965037
+Z9 w1710965037
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_Decoder.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_Decoder.v
 !i122 17
@@ -59,42 +59,15 @@ R6
 R7
 R8
 n@a@l@u_@decoder
-vALU_tb
-DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-R1
-!i10b 1
-!s100 _gb`zIJz5Yfg[n<aBXHLa1
-R2
-I=7=DgJGjj013<lI0Sz?:f2
-R3
-S1
-R0
-w1712717723
-8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv
-FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv
-!i122 20
-L0 3 39
-R4
-r1
-!s85 0
-31
-Z11 !s108 1712717903.000000
-!s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv|
-!i113 1
-o-sv -work work
-!s92 -sv -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA
-R8
-n@a@l@u_tb
 vControl_Unit_Top
-R9
+R1
 !i10b 1
 !s100 IzY>f9K=DKlbR[dT[S`Z71
 R2
 IBjH8k9R]N6gMUJkXIQP8e0
 R3
 R0
-R10
+R9
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Control_Unit_Top.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Control_Unit_Top.v
 !i122 16
@@ -112,14 +85,14 @@ R7
 R8
 n@control_@unit_@top
 vData_Memory
-R9
+R1
 !i10b 1
 !s100 TBQB2Z:GR<MSQ8U^GP>ij0
 R2
 I0n77kGFBBD>7f^>TheIT72
 R3
 R0
-Z12 w1712716236
+Z10 w1712716236
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Data_Memory.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Data_Memory.v
 !i122 15
@@ -137,14 +110,14 @@ R7
 R8
 n@data_@memory
 vDecode_Cycle
-R9
+R1
 !i10b 1
 !s100 4kR6[gT8dJJ_Qce;]>n=n0
 R2
 IVJdUAoHfi?9@cO;VP>eMN2
 R3
 R0
-R12
+R10
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v
 !i122 14
@@ -162,14 +135,14 @@ R7
 R8
 n@decode_@cycle
 vExecute_Cycle
-R9
+R1
 !i10b 1
 !s100 U`AY6BiM[`cY>JRzUIVf42
 R2
 IR>Y3`aSLCO1:I5FG`l_8k1
 R3
 R0
-R10
+R9
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Execute_Cycle.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Execute_Cycle.v
 !i122 13
@@ -187,14 +160,14 @@ R7
 R8
 n@execute_@cycle
 vFetch_Cycle
-R9
+R1
 !i10b 1
 !s100 `><2J2k0I>L08=oA=TPOc3
 R2
 IlMU4bChA8eQ4nKLoc[Bmf1
 R3
 R0
-R10
+R9
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v
 !i122 12
@@ -219,7 +192,7 @@ R2
 ICfogdSk08`A_^5f=nmQVM2
 R3
 R0
-R12
+R10
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v
 !i122 19
@@ -228,7 +201,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v|
 !i113 1
@@ -237,18 +210,18 @@ R7
 R8
 n@hazard_@unit
 vInstruction_Memory
-R9
+R1
 !i10b 1
-!s100 :88Y0Lahg^JbgKIBlVV`>2
+!s100 FK]1JOkMQDl6af2Eg[0ZT3
 R2
-IDcdHe8Ll[;IOlSb4oQAXi3
+I8YS8UPQ@_5<8G@F09UCZR2
 R3
 R0
-R12
+w1712726607
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Instruction_Memory.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Instruction_Memory.v
 !i122 11
-L0 1 28
+L0 1 33
 R4
 r1
 !s85 0
@@ -262,18 +235,18 @@ R7
 R8
 n@instruction_@memory
 vMain_Decoder
-R9
+R1
 !i10b 1
 !s100 0HQ5>B6gUoBOea6Dn]h_f0
 R2
 IVELe[=89kkbKGzTC2f^`=1
 R3
 R0
-R10
+R9
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Main_Decoder.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Main_Decoder.v
 !i122 10
-Z13 L0 1 23
+Z11 L0 1 23
 R4
 r1
 !s85 0
@@ -287,14 +260,14 @@ R7
 R8
 n@main_@decoder
 vMemory_Cycle
-R9
+R1
 !i10b 1
 !s100 X;m2EFm4Xnzj1Uz88OJjN2
 R2
 IkFRHibJ>JS==_G42d<ill0
 R3
 R0
-R12
+R10
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Memory_Cycle.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Memory_Cycle.v
 !i122 9
@@ -312,18 +285,18 @@ R7
 R8
 n@memory_@cycle
 vMux
-R9
+R1
 !i10b 1
 !s100 c?LjzoFN`7d6@LDmDh^?R3
 R2
 IXEfM8gSF6X4CEkfQ9cF2J3
 R3
 R0
-Z14 w1712710467
+Z12 w1712710467
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Mux.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Mux.v
 !i122 8
-Z15 L0 1 9
+Z13 L0 1 9
 R4
 r1
 !s85 0
@@ -337,14 +310,14 @@ R7
 R8
 n@mux
 vPC_Adder
-R9
+Z14 !s110 1712730093
 !i10b 1
 !s100 Mz66?d<jdiLRcLeD9hH180
 R2
 ImS`b@_@[XFl0`hBo1ngj?2
 R3
 R0
-R10
+R9
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v
 !i122 6
@@ -353,7 +326,7 @@ R4
 r1
 !s85 0
 31
-Z16 !s108 1712717901.000000
+Z15 !s108 1712730093.000000
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v|
 !i113 1
@@ -362,14 +335,14 @@ R7
 R8
 n@p@c_@adder
 vPC_Module
-R9
+R14
 !i10b 1
 !s100 ?21>i^IZe1hPlE^VQQP7^2
 R2
 IT=<V^06ndCW]EZObJgZ540
 R3
 R0
-R14
+R12
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC.v
 !i122 7
@@ -378,7 +351,7 @@ R4
 r1
 !s85 0
 31
-R5
+R15
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC.v|
 !i113 1
@@ -386,15 +359,40 @@ R6
 R7
 R8
 n@p@c_@module
+vPipeline_tb
+!s110 1712730095
+!i10b 1
+!s100 Fb@j5og]Z[J:9R]=7X>bF2
+R2
+IG7cZIk5MJ^73eiAZOL0M]2
+R3
+R0
+w1712730038
+8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v
+FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v
+!i122 20
+L0 1 36
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v|
+!i113 1
+R6
+R7
+R8
+n@pipeline_tb
 vPipeline_top
-Z17 !s110 1712717901
+R14
 !i10b 1
 !s100 AX7;O3d8gPWX`@cEKajlg0
 R2
 IQZoFhnHJh2GOz01U]Ak8c3
 R3
 R0
-R12
+R10
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v
 !i122 5
@@ -403,7 +401,7 @@ R4
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v|
 !i113 1
@@ -412,23 +410,23 @@ R7
 R8
 n@pipeline_top
 vRegister_File
-R17
+R14
 !i10b 1
 !s100 3<dQ^4i7JCCB7z8MY<<i50
 R2
 IVQf>Ym`9UfNoTAzRhm3za0
 R3
 R0
-R12
+R10
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Register_File.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Register_File.v
 !i122 4
-R13
+R11
 R4
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Register_File.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Register_File.v|
 !i113 1
@@ -437,23 +435,23 @@ R7
 R8
 n@register_@file
 vSign_Extend
-R17
+R14
 !i10b 1
 !s100 okz4iFfhNSRJCGI@f2IW:1
 R2
 IgCohz8ieH[17_24T?MTnz2
 R3
 R0
-R14
+R12
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Sign_Extend.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Sign_Extend.v
 !i122 3
-R15
+R13
 R4
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Sign_Extend.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Sign_Extend.v|
 !i113 1
@@ -462,14 +460,14 @@ R7
 R8
 n@sign_@extend
 vVAdder
-R17
+R14
 !i10b 1
 !s100 L]4N0CG37egzF9fEY73lO2
 R2
 IOTdF8P3l4CDg>EA3G:7M22
 R3
 R0
-R12
+R10
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VAdder.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VAdder.v
 !i122 1
@@ -478,7 +476,7 @@ R4
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VAdder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VAdder.v|
 !i113 1
@@ -487,7 +485,7 @@ R7
 R8
 n@v@adder
 vVMult
-R17
+R14
 !i10b 1
 !s100 FOH>8Wn;U??==MoA9HO:a2
 R2
@@ -503,7 +501,7 @@ R4
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VMult.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VMult.v|
 !i113 1
@@ -512,14 +510,14 @@ R7
 R8
 n@v@mult
 vWriteback_Cycle
-R17
+R14
 !i10b 1
 !s100 0XO>U@oQNcGXKbaOT1KU22
 R2
 I>Y7L4cJ?Xz2gFmkGh8;dN0
 R3
 R0
-R10
+R9
 8C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Writeback_Cycle.v
 FC:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Writeback_Cycle.v
 !i122 2
@@ -528,7 +526,7 @@ R4
 r1
 !s85 0
 31
-R16
+R15
 !s107 C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Writeback_Cycle.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA|C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Writeback_Cycle.v|
 !i113 1

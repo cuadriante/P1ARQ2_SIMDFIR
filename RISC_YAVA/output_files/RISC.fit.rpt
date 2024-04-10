@@ -1,5 +1,5 @@
 Fitter report for RISC
-Wed Apr 10 01:14:59 2024
+Wed Apr 10 01:17:58 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Apr 10 01:14:59 2024          ;
+; Fitter Status                   ; Successful - Wed Apr 10 01:17:58 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; RISC                                           ;
 ; Top-level Entity Name           ; Pipeline_top                                   ;
@@ -1564,7 +1564,7 @@ Info (184021): Fitter periphery placement operations ending: elapsed time is 00:
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'RISC.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1593,10 +1593,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/neyss/P1ARQ2_SIMDFIR/RISC_YAVA/output_files/RISC.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 7239 megabytes
-    Info: Processing ended: Wed Apr 10 01:15:00 2024
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:01:18
+    Info: Peak virtual memory: 7243 megabytes
+    Info: Processing ended: Wed Apr 10 01:17:59 2024
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:01:13
 
 
 +----------------------------+
