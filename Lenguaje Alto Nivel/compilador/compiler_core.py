@@ -304,11 +304,15 @@ def fill_with_stall_bytes(file):
         file.write(''.join(str(x) for x in STALL) + '\n')
 
 def compilar(input_file_name):
+    base_name = os.path.basename(input_file_name)
     input_file = input_file_name
     
     # Construye el nombre del archivo de salida reemplazando la extensión
-    output_file_name = os.path.splitext(input_file_name)[0] + '.bin'
+    output_file_name = os.path.splitext(base_name)[0] + '.bin'
+    
+    # Construye el camino completo del archivo de salida dentro de la carpeta "compilado"
     output_file_path = os.path.join('Lenguaje Alto Nivel', 'compilador', 'compilado', output_file_name)
+    
     
     # Asegura que el directorio de salida exista
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
