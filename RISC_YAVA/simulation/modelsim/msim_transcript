@@ -12,241 +12,281 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VMult.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:21 on Apr 09,2024
+# Start time: 00:21:33 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VMult.v 
 # -- Compiling module VMult
 # 
 # Top level modules:
 # 	VMult
-# End time: 20:58:21 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:33 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VAdder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:21 on Apr 09,2024
+# Start time: 00:21:33 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/VAdder.v 
 # -- Compiling module VAdder
 # 
 # Top level modules:
 # 	VAdder
-# End time: 20:58:21 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:33 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Writeback_Cycle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:21 on Apr 09,2024
+# Start time: 00:21:33 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Writeback_Cycle.v 
 # -- Compiling module Writeback_Cycle
 # 
 # Top level modules:
 # 	Writeback_Cycle
-# End time: 20:58:21 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:33 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Sign_Extend.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:21 on Apr 09,2024
+# Start time: 00:21:33 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Sign_Extend.v 
 # -- Compiling module Sign_Extend
 # 
 # Top level modules:
 # 	Sign_Extend
-# End time: 20:58:21 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:33 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Register_File.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:21 on Apr 09,2024
+# Start time: 00:21:33 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Register_File.v 
 # -- Compiling module Register_File
 # 
 # Top level modules:
 # 	Register_File
-# End time: 20:58:21 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:33 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:21 on Apr 09,2024
+# Start time: 00:21:33 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v 
 # -- Compiling module Pipeline_top
 # 
 # Top level modules:
 # 	Pipeline_top
-# End time: 20:58:21 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:33 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:21 on Apr 09,2024
+# Start time: 00:21:33 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v 
 # -- Compiling module PC_Adder
 # 
 # Top level modules:
 # 	PC_Adder
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:01
+# End time: 00:21:33 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:33 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC.v 
 # -- Compiling module PC_Module
 # 
 # Top level modules:
 # 	PC_Module
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:33 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Mux.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Mux.v 
 # -- Compiling module Mux
 # 
 # Top level modules:
 # 	Mux
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Memory_Cycle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Memory_Cycle.v 
 # -- Compiling module Memory_Cycle
 # 
 # Top level modules:
 # 	Memory_Cycle
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Main_Decoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Main_Decoder.v 
 # -- Compiling module Main_Decoder
 # 
 # Top level modules:
 # 	Main_Decoder
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Instruction_Memory.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Instruction_Memory.v 
 # -- Compiling module Instruction_Memory
 # 
 # Top level modules:
 # 	Instruction_Memory
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v 
 # -- Compiling module Fetch_Cycle
 # 
 # Top level modules:
 # 	Fetch_Cycle
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Execute_Cycle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Execute_Cycle.v 
 # -- Compiling module Execute_Cycle
 # 
 # Top level modules:
 # 	Execute_Cycle
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v 
 # -- Compiling module Decode_Cycle
 # 
 # Top level modules:
 # 	Decode_Cycle
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Data_Memory.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Data_Memory.v 
 # -- Compiling module Data_Memory
 # 
 # Top level modules:
 # 	Data_Memory
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Control_Unit_Top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Control_Unit_Top.v 
 # -- Compiling module Control_Unit_Top
 # 
 # Top level modules:
 # 	Control_Unit_Top
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_Decoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_Decoder.v 
 # -- Compiling module ALU_Decoder
 # 
 # Top level modules:
 # 	ALU_Decoder
-# End time: 20:58:22 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:22 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 20:58:23 on Apr 09,2024, Elapsed time: 0:00:01
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:23 on Apr 09,2024
+# Start time: 00:21:34 on Apr 10,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v 
 # -- Compiling module Hazard_Unit
 # 
 # Top level modules:
 # 	Hazard_Unit
-# End time: 20:58:23 on Apr 09,2024, Elapsed time: 0:00:00
+# End time: 00:21:34 on Apr 10,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv}
+# vlog -vlog01compat -work work +incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA {C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:58:23 on Apr 09,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv 
-# -- Compiling module ALU_tb
+# Start time: 00:21:34 on Apr 10,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA" C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v 
+# -- Compiling module Pipeline_tb
 # 
 # Top level modules:
-# 	ALU_tb
-# End time: 20:58:23 on Apr 09,2024, Elapsed time: 0:00:00
+# 	Pipeline_tb
+# End time: 00:21:35 on Apr 10,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_tb 
-# Start time: 20:58:23 on Apr 09,2024
-# Loading sv_std.std
-# Loading work.ALU_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Pipeline_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Pipeline_tb 
+# Start time: 00:21:35 on Apr 10,2024
+# Loading work.Pipeline_tb
+# Loading work.Pipeline_top
+# Loading work.Fetch_Cycle
+# Loading work.Mux
+# Loading work.PC_Module
+# Loading work.PC_Adder
+# Loading work.Instruction_Memory
+# Loading work.Decode_Cycle
+# Loading work.Control_Unit_Top
+# Loading work.Main_Decoder
+# Loading work.ALU_Decoder
+# Loading work.Register_File
+# Loading work.Sign_Extend
+# Loading work.Execute_Cycle
 # Loading work.ALU
 # Loading work.VAdder
 # Loading work.VMult
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'test'.  Expected 9, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /ALU_tb/test File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv Line: 10
-# ** Warning: (vsim-3722) C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv(10): [TFMPC] - Missing connection for port 'OverFlow'.
-# ** Warning: (vsim-3722) C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv(10): [TFMPC] - Missing connection for port 'Carry'.
-# ** Warning: (vsim-3722) C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv(10): [TFMPC] - Missing connection for port 'Zero'.
-# ** Warning: (vsim-3722) C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/ALU_tb.sv(10): [TFMPC] - Missing connection for port 'Negative'.
+# Loading work.Memory_Cycle
+# Loading work.Data_Memory
+# Loading work.Writeback_Cycle
+# Loading work.Hazard_Unit
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (256) for port 'PCTargetE'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (256) for port 'PCD'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (256) for port 'PCPlus4D'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch/MUX_FETCH File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch/MUX_FETCH File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'c'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch/MUX_FETCH File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'PC'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch/Program_Counter File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'PC_Next'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch/Program_Counter File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch/PCAdder File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch/PCAdder File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'c'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/PC_Adder.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Fetch/PCAdder File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Fetch_Cycle.v Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'In'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Sign_Extend.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/Decode/SignExtend File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Decode_Cycle.v Line: 74
+# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'InstrD'. The port definition is at: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Hazard_Unit.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /Pipeline_tb/Test/HazardUnit File: C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_top.v Line: 124
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Joseff01  Hostname: LAPTOP-DBQ7SAL4  ProcessID: 1668
-#           Attempting to use alternate WLF file "./wlftz1mijf".
+#           Attempting to use alternate WLF file "./wlfts11bx4".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftz1mijf
+#           Using alternate file: ./wlfts11bx4
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 20:58:46 on Apr 09,2024, Elapsed time: 0:00:23
-# Errors: 0, Warnings: 7
+# ** Note: $finish    : C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v(17)
+#    Time: 220 ps  Iteration: 0  Instance: /Pipeline_tb
+# 1
+# Break in Module Pipeline_tb at C:/Users/Joseff01/Documents/Git/P1ARQ2_SIMDFIR/RISC_YAVA/Pipeline_tb.v line 17
+# End time: 00:25:20 on Apr 10,2024, Elapsed time: 0:03:45
+# Errors: 0, Warnings: 15
