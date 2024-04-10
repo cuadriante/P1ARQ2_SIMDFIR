@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Apr 10 01:17:58 2024
+Fitter Status : Successful - Wed Apr 10 11:57:16 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : RISC
 Top-level Entity Name : Pipeline_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1 / 32,070 ( < 1 % )
-Total registers : 0
-Total pins : 2 / 457 ( < 1 % )
+Logic utilization (in ALMs) : 239 / 32,070 ( < 1 % )
+Total registers : 397
+Total pins : 3 / 457 ( < 1 % )
 Total virtual pins : 0
-Total block memory bits : 0 / 4,065,280 ( 0 % )
-Total RAM Blocks : 0 / 397 ( 0 % )
+Total block memory bits : 64 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 2 / 397 ( < 1 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

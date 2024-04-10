@@ -70,6 +70,11 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_tb -section_id ALU_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME VAdder_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id VAdder_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME VAdder_tb -section_id VAdder_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Pipeline_tb.v -section_id Pipeline_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU_tb.sv -section_id ALU_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE VAdder_tb.sv -section_id VAdder_tb
+set_global_assignment -name VERILOG_FILE uart_tx.v
+set_global_assignment -name VERILOG_FILE uart_rx.v
 set_global_assignment -name VERILOG_FILE Pipeline_tb.v
 set_global_assignment -name VERILOG_FILE VMult.v
 set_global_assignment -name VERILOG_FILE VAdder.v
@@ -92,7 +97,5 @@ set_global_assignment -name VERILOG_FILE ALU_Decoder.v
 set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name VERILOG_FILE Hazard_Unit.v
 set_global_assignment -name SYSTEMVERILOG_FILE ALU_tb.sv
-set_global_assignment -name EDA_TEST_BENCH_FILE Pipeline_tb.v -section_id Pipeline_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ALU_tb.sv -section_id ALU_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE VAdder_tb.sv -section_id VAdder_tb
+set_location_assignment PIN_AH19 -to o_txd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

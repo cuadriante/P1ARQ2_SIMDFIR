@@ -1,5 +1,6 @@
-module Pipeline_top(clk,rst);
+module Pipeline_top(clk,rst, o_txd);
     input clk,rst;
+	 output o_txd;
 
     // Declaration of Interim Wires
     wire PCSrcE, RegWriteW, RegFileSelect, RegWriteE, ALUSrcE, MemWriteE, ResultSrcE, BranchE, RegWriteM, MemWriteM, ResultSrcM, ResultSrcW;
@@ -11,6 +12,8 @@ module Pipeline_top(clk,rst);
     wire [4:0] RS1_E, RS2_E;
     wire [1:0] ForwardBE, ForwardAE;
     wire [1:0] VForwardBE, VForwardAE;
+	 reg r_tx_dv;
+	wire w_tx_done;
     
     wire [31:0] PC;
 	 
@@ -148,5 +151,26 @@ module Pipeline_top(clk,rst);
         .VFlushD(VFlushD),
         .VFlushE(VFlushE)
     );
+	 
+	 uart_tx #(.CLKS_PER_BIT(5208)) uart_tx (
+    .i_Clock(clk),
+    .i_Tx_DV(r_tx_dv),
+    .i_Tx_Byte(ResultW), 
+    .o_Tx_Active(),
+    .o_Tx_Done(w_tx_done),
+    .o_Tx_Serial(o_txd)
+);
+
+always @(posedge clk or posedge rst) begin
+    if (rst) begin
+        r_tx_dv <= 1'b0;
+    end else if (!r_tx_dv) begin
+
+        r_tx_dv <= 1'b1;
+    end else if (w_tx_done) begin
+
+        r_tx_dv <= 1'b0;
+    end
+end
 
 endmodule
