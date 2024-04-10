@@ -311,7 +311,7 @@ def compilar(input_file_name):
     output_file_name = os.path.splitext(base_name)[0] + '.bin'
     
     # Construye el camino completo del archivo de salida dentro de la carpeta "compilado"
-    output_file_path = os.path.join('Lenguaje Alto Nivel', 'compilador', 'compilado', output_file_name)
+    output_file_path = os.path.join('Lenguaje Alto Nivel', 'compilador', 'bin', output_file_name)
     
     
     # Asegura que el directorio de salida exista
