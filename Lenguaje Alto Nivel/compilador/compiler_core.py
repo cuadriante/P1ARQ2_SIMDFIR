@@ -254,22 +254,32 @@ def process_CUSTOM_format(operation, operands, labels=None):
         compiled_instruction = f"{bits['funct7']}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{format_register(rd)}{opcode}"
     
     elif operation == 'LDV':
-        # Asegurarse de que hay exactamente 2 operandos y el inmediato no está vacío.
-        if len(operands) != 2 or not operands[1]:
-            raise ValueError(f"Número incorrecto de operandos o inmediato vacío para {operation}: {operands}")
-        rd, imm = operands
-        # Convierte el valor inmediato de hexadecimal a binario asegurando que es un valor válido.
-        imm = format_immediate(imm, bits=12) 
-        compiled_instruction = f"{imm}{'00000'}{bits['funct3']}{format_register(rd)}{opcode}"
-    
-    elif operation == 'STV':
-        # Mantener el soporte para STV como estaba antes.
-        if len(operands) != 3:
+        # Ajusta para manejar 'LDV rd, #imm' o 'LDV rd, rs1'
+        if len(operands) != 2:
             raise ValueError(f"Número incorrecto de operandos para {operation}: {operands}")
-        rs1, rs2, offset = operands
-        formatted_offset = format_immediate(offset, bits=12)
-        compiled_instruction = f"{formatted_offset}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{opcode}"
-    
+        
+        rd, operand2 = operands
+        if operand2.startswith('#'):  # Si el segundo operando es un valor inmediato
+            # Procesa el valor inmediato correctamente
+            imm = format_immediate(operand2, 12)
+            rs1 = '00000'  # En el formato LDV, el rs1 se establece a '0' si es un inmediato
+        else:  # Si el segundo operando es un registro
+            rs1 = operand2
+            imm = '0' * 12  # Suponiendo que el valor inmediato no se utiliza cuando es un registro
+        compiled_instruction = f"{imm}{format_register(rs1)}{bits['funct3']}{format_register(rd)}{opcode}"
+        
+    elif operation == 'STV':
+        bits = instruction_set[operation]
+        opcode = bits['opcode']
+
+        # Asegura que hay un número correcto de operandos
+        if len(operands) != 2:
+            raise ValueError(f"Número incorrecto de operandos para {operation}: {operands}")
+
+        rs1, rs2 = operands
+
+        compiled_instruction = f"{format_immediate('0', 7)}{format_register(rs2)}{format_register(rs1)}{bits['funct3']}{format_immediate('0', 5)}{opcode}"
+        
     else:
         raise ValueError(f"Operación CUSTOM no soportada: {operation}")
     
